@@ -11,6 +11,7 @@ public class Jokes {
 
     // Constructor
     public Jokes(String joke){
+        getJokesList();
     }
 
     public Jokes() {
@@ -53,8 +54,10 @@ public class Jokes {
 
     public String getJoke() {
         mRandom = new Random();
-        int index = mRandom.nextInt(jokesList.size());
-        mJoke = jokesList.get(index);
+        if (!jokesList.isEmpty()) {
+            int index = mRandom.nextInt(jokesList.size());
+            mJoke = jokesList.get(index);
+        }
         return mJoke;
     }
 

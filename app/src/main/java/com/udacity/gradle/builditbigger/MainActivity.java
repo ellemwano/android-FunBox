@@ -8,7 +8,6 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.mwano.lauren.androidlibrary.JokeDisplayActivity;
-import com.mwano.lauren.jokeslibrary.Jokes;
 
 
 public class MainActivity extends AppCompatActivity implements OnTaskCompleted {
