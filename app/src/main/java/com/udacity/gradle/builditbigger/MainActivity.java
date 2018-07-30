@@ -11,7 +11,7 @@ import com.mwano.lauren.androidlibrary.JokeDisplayActivity;
 import com.mwano.lauren.jokeslibrary.Jokes;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements OnTaskCompleted {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,18 +43,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Launches the JokeDisplayActivity displaying the joke from the Java library
-     * @param view
+     * Execute the EndPointAsyncTask to get a joke from the library via the GoogleCloudEndpoint
+     * @param view the button clicked to execute the asyncTask
      */
-    public void displayJoke(View view) {
-        Intent intent = new Intent(this, JokeDisplayActivity.class);
-        Jokes jokes = new Jokes();
-        String singleJoke = jokes.getJoke();
-        intent.putExtra(JokeDisplayActivity.JOKE, singleJoke);
-        startActivity(intent);
+    public void fetchJoke(View view) {
+        EndpointsAsyncTask asyncTask = new EndpointsAsyncTask(MainActivity.this);
+        asyncTask.execute(this);
         //Toast.makeText(this, funnyJoke, Toast.LENGTH_LONG).show();
     }
 
 
-
+    /**
+     * Intent to launch the JokeDisplayActivity to display the joke fetched from the library
+     * @param joke The joke fetched from the library, through the GCE
+     */
+    @Override
+    public void onTaskCompleted(String joke) {
+        Intent intent = new Intent(this, JokeDisplayActivity.class);
+        intent.putExtra(JokeDisplayActivity.JOKE, joke);
+        startActivity(intent);
+    }
 }
