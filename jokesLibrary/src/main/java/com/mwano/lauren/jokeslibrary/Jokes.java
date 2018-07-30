@@ -11,10 +11,11 @@ public class Jokes {
 
     // Constructor
     public Jokes(String joke){
-        getJokesList();
+
     }
 
     public Jokes() {
+        getJokesList();
     }
 
     public ArrayList<String> getJokesList() {
@@ -54,10 +55,9 @@ public class Jokes {
 
     public String getJoke() {
         mRandom = new Random();
-        if (!jokesList.isEmpty()) {
+
             int index = mRandom.nextInt(jokesList.size());
             mJoke = jokesList.get(index);
-        }
         return mJoke;
     }
 
