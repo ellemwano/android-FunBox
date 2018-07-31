@@ -9,15 +9,18 @@ public class Jokes {
     private Random mRandom;
     private ArrayList<String> jokesList = new ArrayList<>();
 
-    // Constructor
+    // Constructors
     public Jokes(String joke){
-
     }
 
     public Jokes() {
         getJokesList();
     }
 
+    /**
+     * Fetch the list of jokes
+     * @return an array list of jokes
+     */
     public ArrayList<String> getJokesList() {
         jokesList.add("What is a prisoner's favourite punctuation mark?\n" +
                         "\n" +
@@ -52,12 +55,10 @@ public class Jokes {
         return jokesList;
     }
 
-
     public String getJoke() {
         mRandom = new Random();
-
-            int index = mRandom.nextInt(jokesList.size());
-            mJoke = jokesList.get(index);
+        int index = mRandom.nextInt(jokesList.size());
+        mJoke = jokesList.get(index);
         return mJoke;
     }
 
