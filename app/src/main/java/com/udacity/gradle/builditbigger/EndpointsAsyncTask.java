@@ -2,6 +2,7 @@ package com.udacity.gradle.builditbigger;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.util.Log;
 
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
@@ -23,6 +24,9 @@ class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
     private static MyApi myApiService = null;
     private Context mContext;
 
+    public static final String TAG = EndpointsAsyncTask.class.getSimpleName();
+
+    // Constructors
     public EndpointsAsyncTask(OnTaskCompleted listener) {
         mListener = listener;
     }
@@ -53,7 +57,8 @@ class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
         try {
             return myApiService.getJoke().execute().getData();
         } catch (IOException e) {
-            return e.getMessage();
+            Log.d(TAG, "e.getMessage()");
+            return "Error loading joke";
         }
     }
 

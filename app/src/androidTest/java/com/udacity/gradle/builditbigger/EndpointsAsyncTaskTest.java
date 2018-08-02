@@ -10,6 +10,9 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 import static junit.framework.Assert.assertFalse;
+import static junit.framework.Assert.assertNotNull;
+import static junit.framework.Assert.assertNotSame;
+import static org.junit.Assert.assertEquals;
 
 
 /**
@@ -20,6 +23,7 @@ public class EndpointsAsyncTaskTest {
 
     // create  a signal to let us know when our task is done.
     final CountDownLatch signal = new CountDownLatch(1);
+    final String error = "Error loading joke";
     private String mResult;
 
     @Test
@@ -48,6 +52,7 @@ public class EndpointsAsyncTaskTest {
         signal.await(30, TimeUnit.SECONDS);
 
        // The asyncTask is completed
+        assertEquals(false, mResult.equals(error));
         assertFalse(mResult.isEmpty());
     }
 }
