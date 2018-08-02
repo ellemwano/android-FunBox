@@ -12,6 +12,8 @@
         android:id="@+id/joke_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="@tools:sample/lorem/random"/>
-
+        tools:text="@tools:sample/lorem/random"
+        android:paddingTop="32dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:textSize="18sp"/>
 </LinearLayout>

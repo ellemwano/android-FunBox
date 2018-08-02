@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity implements OnTaskCompleted {
     public void fetchJoke(View view) {
         EndpointsAsyncTask asyncTask = new EndpointsAsyncTask(MainActivity.this);
         asyncTask.execute(this);
-        //Toast.makeText(this, funnyJoke, Toast.LENGTH_LONG).show();
     }
 
 
