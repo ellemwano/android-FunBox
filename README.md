@@ -12,24 +12,17 @@ _Your call._
 # FunBox
 Project #4 of the [Android Developer](https://eu.udacity.com/course/android-developer-nanodegree-by-google--nd801) Nanodegree by Udacity.
 
-In this project, you will create an app with multiple flavors that uses
-multiple libraries and Google Cloud Endpoints. The finished app will consist
-of four modules. A Java library that provides jokes, a Google Cloud Endpoints
-(GCE) project that serves those jokes, an Android Library containing an
-activity for displaying jokes, and an Android app that fetches jokes from the
-GCE module and passes them to the Android Library for display.
-
 ## Project Overview
-create an app with multiple flavors that uses multiple libraries and Google Cloud Endpoints. The finished app will consist of four modules:
+Create an app with multiple flavors that uses multiple libraries and Google Cloud Endpoints. The finished app will consist of four modules:
 - A Java library that provides jokes
 - A Google Cloud Endpoints (GCE) project that serves those jokes
 - An Android Library containing an activity for displaying jokes
 - An Android app that fetches jokes from the GCE module and passes them to the Android Library for display
 
-## Why this Project
+## Why This Project
 As Android projects grow in complexity, it becomes necessary to customize the behavior of the Gradle build tool, allowing automation of repetitive tasks. Particularly, factoring functionality into libraries and creating product flavors allow for much bigger projects with minimal added complexity.
 
-## Learning objectives
+## Learning Objectives
 You will learn the role of Gradle in building Android Apps and how to use Gradle to manage apps of increasing complexity. You'll learn to:
 - Add free and paid flavors to an app, and set up your build to share code between them
 - Factor reusable functionality into a Java library
@@ -37,6 +30,14 @@ You will learn the role of Gradle in building Android Apps and how to use Gradle
 - Configure a multi-project build to compile your libraries and app
 - Use the Gradle App Engine plugin to deploy a backend
 - Configure an integration test suite that runs against the local App Engine development server
+
+## Completed Project - FunBox
+* [Google Cloud Endpoint](https://cloud.google.com/endpoints/)
+* Gradle - [Java library](https://guides.gradle.org/building-java-libraries/)
+* Android Framework
+   - Build variants: Flavors
+   - Espresso
+   - Android library
 
 ## Instructions
 - ### Step 0: Starting Point
@@ -92,7 +93,7 @@ string. For a refresher on setting up Android tests, check out demo 4.09.
 Add free and paid product flavors to your app. Remove the ad (and any
 dependencies you can) from the paid flavor.
 
-## Project requirements
+## Project Requirements
 - **Required Components**
   * Project contains a Java library for supplying jokes.
   * Project contains an Android library with an activity that displays jokes passed to it as intent extras. 
