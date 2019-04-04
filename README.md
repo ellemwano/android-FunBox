@@ -32,12 +32,14 @@ You will learn the role of Gradle in building Android Apps and how to use Gradle
 - Configure an integration test suite that runs against the local App Engine development server
 
 ## Completed Project - FunBox
+![](https://github.com/ellemwano/android-FunBox/blob/master/pic/funBoxsm.png)
 * [Google Cloud Endpoint](https://cloud.google.com/endpoints/)
 * Gradle - [Java library](https://guides.gradle.org/building-java-libraries/)
 * Android Framework
    - Build variants: Flavors
    - Espresso
    - Android library
+* [Google Mobile Ads SDK](https://developers.google.com/admob/android/quick-start)
 
 ## Instructions
 - ### Step 0: Starting Point
@@ -104,6 +106,3 @@ dependencies you can) from the paid flavor.
 - **Required Behavior**
   * App retrieves jokes from Google Cloud Endpoints module and displays them via an Activity from the Android Library. Note that the GCE module need only be deployed locally.
   * App conforms to common standards found in the [Android Nanodegree General Project Guidelines](http://udacity.github.io/android-nanodegree-guidelines/core.html).
-
-
-
