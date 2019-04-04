@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     tools:context=".JokeDisplayActivityFragment">
 
     <TextView
         android:id="@+id/joke_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="@tools:sample/lorem/random"
-        android:paddingTop="32dp"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:textSize="18sp"/>
-</LinearLayout>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|center_vertical"
+        android:padding="16dp"
+        android:textSize="22sp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_orange_dark"
+        tools:text="@tools:sample/lorem/random" />
+</FrameLayout>
